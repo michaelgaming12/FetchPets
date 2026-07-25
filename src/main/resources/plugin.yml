@@ -1,0 +1,17 @@
+name: FetchPets
+main: com.mikauri.fetchpets.FetchPets
+version: 1.0.0
+api-version: '1.17'
+description: Teleports a player's tamed pets to them from anywhere, including unloaded chunks.
+commands:
+  fetchpets:
+    description: Teleport your tamed pets to you, or list where they are
+    usage: /fetchpets [list] [player]
+    aliases: [fetchdogs, comepets, callpets]
+permissions:
+  fetchpets.use:
+    description: Use /fetchpets to pull your own pets and list them
+    default: true
+  fetchpets.others:
+    description: Use /fetchpets <player> to act on another player's pets
+    default: op

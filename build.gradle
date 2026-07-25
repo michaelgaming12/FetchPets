@@ -1,0 +1,19 @@
+plugins { id 'java' }
+group = 'com.mikauri'
+version = '1.0.0'
+java { toolchain { languageVersion = JavaLanguageVersion.of(21) } }
+repositories {
+    mavenCentral()
+    maven { url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+}
+dependencies {
+    compileOnly('org.spigotmc:spigot-api:1.17-R0.1-SNAPSHOT:shaded') { transitive = false }
+}
+jar { archiveFileName = "FetchPets-${version}.jar" }
+// Target Java 16 bytecode so the jar actually LOADS on old servers (MC 1.17 =
+// Java 16), matching the 1.17 api-version floor. Without this it compiles to
+// Java 21 bytecode and won't run below ~1.20.5 despite the api-version.
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 16
+}

@@ -1,0 +1,16 @@
+# â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+#  FetchPets config.yml
+# â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+settings:
+  # Stand sitting pets up when fetched, so they actually follow you home
+  # instead of sitting frozen wherever they land. (Applies to wolves, cats,
+  # parrots, foxes - anything that can sit.)
+  stand-up-sitting-pets: true
+
+  # Also scan the live (loaded) worlds for matching pets, not just the
+  # on-disk region files. Recommended: catches pets near you / recently moved
+  # whose disk data may be stale.
+  include-loaded: true
+
+  # Cooldown between uses, in seconds (per player). 0 disables.
+  cooldown-seconds: 5
