@@ -61,7 +61,7 @@ Requires JDK 21+. The Gradle wrapper is included, so no local Gradle install is 
 The jar lands in `build/libs/`.
 
 Compiled against the Spigot 1.17 API and targeted at Java 16 bytecode, so a single
-jar runs on Minecraft 1.17 through 26.2.
+jar runs on Minecraft 1.17 through 26.3.
 
 ## Reporting bugs
 
