@@ -1,0 +1,93 @@
+name: Bug report
+description: Something in FetchPets isn't working right.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! The details below make it much faster to track down.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What went wrong, and what did you expect to happen instead?
+      placeholder: "I ran /fetchpets and my wolf in the Nether didn't come back. I expected it to teleport to me."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can the problem be triggered again?
+      placeholder: |
+        1. Tame a wolf
+        2. Walk 1000 blocks away so its chunk unloads
+        3. Run /fetchpets
+    validations:
+      required: false
+
+  - type: dropdown
+    id: pet
+    attributes:
+      label: Which pets were affected?
+      multiple: true
+      options:
+        - Wolf
+        - Cat
+        - Parrot
+        - Horse / donkey / mule
+        - Llama
+        - Other
+        - All of them
+    validations:
+      required: false
+
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where was the pet?
+      multiple: true
+      options:
+        - Nearby (loaded chunk)
+        - Far away (unloaded chunk)
+        - Another dimension (Nether / End)
+        - Not sure
+    validations:
+      required: false
+
+  - type: input
+    id: server
+    attributes:
+      label: Server software and version
+      description: Run `/version` in game or in the console.
+      placeholder: "Paper 26.3 build 12"
+    validations:
+      required: true
+
+  - type: input
+    id: plugin-version
+    attributes:
+      label: FetchPets version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+
+  - type: textarea
+    id: list-output
+    attributes:
+      label: Output of /fetchpets list
+      description: Optional, but very helpful when a pet isn't found.
+      render: text
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Console errors
+      description: Paste any errors from the server console that mention FetchPets.
+      render: text
+    validations:
+      required: false
